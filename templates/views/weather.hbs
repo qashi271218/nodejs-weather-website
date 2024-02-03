@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            color: #fff;
+            overflow-x: hidden;
+            height: 100%;
+            background-image: linear-gradient(#81D4FA, #2196F3);
+            background-repeat: no-repeat;
+        }
+
+        .card0 {
+            width: 94%;
+        }
+
+        .card1 {
+            background-image: linear-gradient(#2196F3, #81D4FA);
+            padding: 30px 20px 30px 50px;
+        }
+
+        .image {
+            width: 300px;
+            height: 300px;
+        }
+
+        .large-font {
+            font-size: 70px;
+            font-family: Arial;
+        }
+
+        .fa-sun-o {
+            font-size: 22px;
+        }
+
+        .card2 {
+            background-color: #607D8B;
+            padding: 0px 0px 40px 40px;
+        }
+
+        input {
+            background-color: #607D8B;
+            padding: 24px 0px 12px 0px !important;
+            width: 80%;
+            box-sizing: border-box;
+            border: none !important;
+            border-bottom: 1px solid #CFD8DC !important;
+            font-size: 16px !important;
+            color: #fff !important;
+        }
+
+        input:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border-bottom: 1px solid #fff !important;
+            outline-width: 0;
+            font-weight: 400;
+        }
+
+        ::placeholder {
+            color: #B0BEC5 !important;
+            opacity: 1;
+        }
+
+        :-ms-input-placeholder {
+            color: #B0BEC5 !important;
+        }
+
+        ::-ms-input-placeholder {
+            color: #B0BEC5 !important;
+        }
+
+        .fa-search {
+            color: #607D8B;
+            background-color: #E1F5FE;
+            font-size: 20px;
+            padding: 20px;
+            width: 20%;
+            cursor: pointer;
+        }
+
+        .light-text {
+            color: #B0BEC5;
+        }
+
+        .suggestion:hover {
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .line {
+            height: 1px;
+            background-color: #B0BEC5;
+        }
+
+        @media screen and (max-width: 500px) {
+            .card1 {
+                padding-left: 26px;
+            }
+        }
+    </style>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>{{ title }}</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+    <link type="text/css" rel="stylesheet" href="404_css/style.css" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
+    {{>header}}
+    <!-- end header -->
+
+    <!-- service -->
+    <div class="container-fluid px-1 px-sm-3 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="row card0">
+                <div class="card1 col-lg-8 col-md-7">
+                    <div class="text-center">
+                        <img class="image mt-5" src="https://i.imgur.com/M8VyA2h.png">
+                    </div>
+                    <div class="row px-3 mt-3 mb-3">
+                        <h1 class="large-font mr-3"><span class="temp">26</span>&#176;</h1>
+                        <div class="d-flex flex-column mr-3">
+                            <h2 class="mt-3 mb-0 country">London</h2>
+                            <small><span class="time">10:36</span> - <span class="day">Tuesday</span>, <span
+                                    class="date">22 Oct
+                                    '19</span></small>
+                        </div>
+                        <div class="d-flex flex-column text-center">
+                            <h3 class="fa fa-sun-o mt-4"></h3>
+                            <small class="daytype">Sunny</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="card2 col-lg-4 col-md-5">
+                    <form>
+                        <div class="row px-3">
+                            <input type="text" name="location" placeholder="Location...." class="mb-5">
+                            <button class="fa fa-search mb-5 mr-0 text-center"></button>
+                            <p class="error" style="color:red;width: 100%;background: white;color: red;padding: 9px;">
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end service -->
+
+    <!--  footer -->
+    {{>footer}}
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none"
+            });
+
+            $(".zoom").hover(function () {
+
+                $(this).addClass('transition');
+            }, function () {
+
+                $(this).removeClass('transition');
+            });
+        });
+
+    </script>
+    <script>
+        var time = new Date();
+        time = time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+        $('.time').text(time)
+
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+        let date = new Date();
+        var day = date.getDay();
+        var today_day = weekday[day]
+        $('.day').text(today_day)
+
+        const datee = date.getDate();
+        const month = date.toLocaleString('default', { month: 'short' });
+        const year = date.getFullYear()
+        $('.date').text(`${datee} ${month} ${year}`)
+    </script>
+</body>
+
+</html>
